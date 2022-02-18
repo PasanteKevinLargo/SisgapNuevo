@@ -43,7 +43,7 @@ class ProveedorController extends Controller
                 'A.SERIE_PROVEEDOR',
                 'A.CODESPECIAL_PROVEEDOR',
                 'A.AUTORIZACION_PROVEEDOR',
-                'A.CADUCIDAD_PROVEEDOR';
+                'A.CADUCIDAD_PROVEEDOR');
 
         if ($buscar != '') {
             $registros = $registros->whereRaw('(A.NOMBRE_PROVEEDOR LIKE "%' . $buscar . '%"
@@ -94,6 +94,7 @@ class ProveedorController extends Controller
         return true;   
     }
 
+     /*Se esta agregando la funcion update*/
     public function update(Request $request)
     {
         if (!$request->ajax()) {
@@ -121,6 +122,7 @@ class ProveedorController extends Controller
         return true;
     }
 
+    /*Se esta agregando la funcion destroy*/
     public function destroy(Request $request)
     {
         $registro = Proveedor::findOrFail($request->id);

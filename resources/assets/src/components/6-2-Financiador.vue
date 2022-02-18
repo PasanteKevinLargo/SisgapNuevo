@@ -104,7 +104,8 @@
               ref="descripcion"
               :disabled="disabled"
             />
-          </b-form-group>
+         </b-form-group>
+
           <b-form-group label="Correo" class="col-6">
             <b-input
               v-model="EMAIL_FINANCIADOR"

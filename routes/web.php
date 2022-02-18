@@ -90,7 +90,7 @@ Route::group(['middleware'=>['auth']],function(){
     Route::post('/financiador/destroy', 'FinanciadorController@destroy');
 
     //Proveedor agregado por el pasante
-    Route::get('/proveedor/selectFinanciador', 'ProveedorController@selectFinanciador');
+    Route::get('/proveedor/selectProveedor', 'ProveedorController@selectFinanciador');
     Route::get('/proveedor/index', 'ProveedorController@index');
     Route::post('/proveedor/registrar', 'ProveedorController@store');
     Route::put('/proveedor/actualizar', 'ProveedorController@update');

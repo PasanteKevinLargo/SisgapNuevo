@@ -86,73 +86,98 @@
             ><i class="ion ion-md-create"></i
           ></b-btn>
           <!-- <small class="text-muted">We need payment information to process your order.</small> -->
-        </div>
-        <b-form-row>
-          <b-form-group label="Nombre del Financiador" class="col-12">
-            <b-input
-              v-model="NOMBRE_FINANCIADOR"
-              placeholder="Nombre del financiador"
-              ref="descripcion"
-              :disabled="disabled"
-            />
-          </b-form-group>
-        </b-form-row>
-        <b-form-row>
-          <b-form-group label="Contacto" class="col-6">
-            <b-input
-              v-model="CONTACTO_FINANCIADOR"
-              placeholder="Nombre del financiador"
-              ref="descripcion"
-              :disabled="disabled"
-            />
-          </b-form-group>
-          <b-form-group label="Correo" class="col-6">
-            <b-input
-              v-model="EMAIL_FINANCIADOR"
-              placeholder="Nombre del financiador"
-              ref="descripcion"
-              :disabled="disabled"
-            />
-          </b-form-group>
-        </b-form-row>
-        <b-form-row>
-          <b-form-group label="Fijo" class="col-4">
-            <b-input
-              v-model="TELEF1_FINANCIADOR"
-              placeholder="Nombre del financiador"
-              ref="descripcion"
-              :disabled="disabled"
-            />
-          </b-form-group>
-          <b-form-group label="Celular" class="col-4">
-            <b-input
-              v-model="TELEF2_FINANCIADOR"
-              placeholder="Nombre del financiador"
-              ref="descripcion"
-              :disabled="disabled"
-            />
-          </b-form-group>
-          <b-form-group label="Internacional" class="col-4">
-            <b-input
-              v-model="TELEF3_FINANCIADOR"
-              placeholder="Nombre del financiador"
-              ref="descripcion"
-              :disabled="disabled"
-            />
-          </b-form-group>
-        </b-form-row>
-        <div v-show="errorPersona" class="form-group row div-error">
-          <div class="text-center text-error">
-            <div
-              v-for="error in errorMostrarMsjPersona"
-              :key="error"
-              v-text="error"
-            ></div>
+          <!-- Modificado por el pasante -->
           </div>
-        </div>
-      </b-modal>
-    </b-card-body>
-  </div>
+            <b-form-row>
+              <b-form-group label="Nombre Completo" class="col-12">
+                <b-input
+                  v-model="NOMBRETOTAL_PROVEEDOR"
+                  placeholder="Nombre Completo"
+                  ref="descripcion"
+                  :disabled="disabled"
+                />
+               </b-form-group>
+
+              <b-form-group label="Direccion" class="col-12">
+                <b-input
+                  v-model="DIRECCION1_PROVEEDOR"
+                  placeholder="Direccion"
+                  ref="descripcion"
+                  :disabled="disabled"
+                />
+              </b-form-group>
+           </b-form-row>
+
+
+            <b-form-row>
+              <b-form-group label="Telf 1" class="col-6">
+                <b-input
+                  v-model="TEL1_PROVEEDOR"
+                  placeholder="Telf 1"
+                  ref="descripcion"
+                  :disabled="disabled"
+                />
+              </b-form-group>
+
+              <b-form-group label="Telf 2" class="col-6">
+                <b-input
+                  v-model="TEL2_PROVEEDOR"
+                  placeholder="Telf 2"
+                  ref="descripcion"
+                  :disabled="disabled"
+                />
+              </b-form-group>  
+            </b-form-row>
+
+            <b-form-row>
+              <b-form-group label="Tipo de proveedor" class="col-3">
+                <b-input
+                  v-model="TIPO_PROVEEDOR"
+                  placeholder="Tipo de proveedor"
+                  ref="descripcion"
+                  :disabled="disabled"
+                />
+              </b-form-group>
+              <b-form-group label="Correo" class="col-3">
+                <b-input
+                  v-model="OBSERVACION_PROVEEDOR"
+                  placeholder="Correo"
+                  ref="descripcion"
+                  :disabled="disabled"
+                />
+              </b-form-group>
+              <b-form-group label="Ruc" class="col-3">
+                <b-input
+                  v-model="RUC_PROVEEDOR"
+                  placeholder="Ruc"
+                  ref="descripcion"
+                  :disabled="disabled"
+                />
+              </b-form-group>
+              <b-form-group label="Activo" class="col-3">
+                <b-input
+                  v-model="ACTIVO_PROVEEDOR"
+                  placeholder="Activo"
+                  ref="descripcion"
+                  :disabled="disabled"
+                />
+              </b-form-group>
+
+              
+
+            </b-form-row>
+            <div v-show="errorPersona" class="form-group row div-error">
+              <div class="text-center text-error">
+                <div
+                  v-for="error in errorMostrarMsjPersona"
+                  :key="error"
+                  v-text="error"
+                ></div>
+              </div>
+            </div>
+          </b-modal>
+        </b-card-body>
+      </div>
 </template>
 
 <style src="@/vendor/libs/vue-data-tables/vue-data-tables.scss" lang="scss"></style>
