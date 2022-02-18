@@ -60880,7 +60880,7 @@ var render = function() {
                             {
                               attrs: {
                                 icon: "ion ion-md-desktop",
-                                to: "/home",
+                                to: "/v-proveedor",
                                 exact: true
                               }
                             },
@@ -79418,52 +79418,58 @@ var router = new vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]({
     children: [{
       path: 'home',
       component: function component() {
-        return __webpack_require__.e(/*! import() */ 12).then(__webpack_require__.bind(null, /*! @/components/Home */ "./resources/assets/src/components/Home.vue"));
+        return __webpack_require__.e(/*! import() */ 13).then(__webpack_require__.bind(null, /*! @/components/Home */ "./resources/assets/src/components/Home.vue"));
       }
     }, {
       path: 'v-proyecto',
       component: function component() {
-        return Promise.all(/*! import() */[__webpack_require__.e(1), __webpack_require__.e(4), __webpack_require__.e(15), __webpack_require__.e(14), __webpack_require__.e(16)]).then(__webpack_require__.bind(null, /*! @/components/01Proyecto */ "./resources/assets/src/components/01Proyecto.vue"));
+        return Promise.all(/*! import() */[__webpack_require__.e(0), __webpack_require__.e(1), __webpack_require__.e(3), __webpack_require__.e(2), __webpack_require__.e(5)]).then(__webpack_require__.bind(null, /*! @/components/01Proyecto */ "./resources/assets/src/components/01Proyecto.vue"));
       }
     }, {
       path: 'v-oficio',
       component: function component() {
-        return Promise.all(/*! import() */[__webpack_require__.e(1), __webpack_require__.e(4), __webpack_require__.e(14), __webpack_require__.e(7)]).then(__webpack_require__.bind(null, /*! @/components/10Oficio */ "./resources/assets/src/components/10Oficio.vue"));
+        return Promise.all(/*! import() */[__webpack_require__.e(0), __webpack_require__.e(1), __webpack_require__.e(2), __webpack_require__.e(8)]).then(__webpack_require__.bind(null, /*! @/components/10Oficio */ "./resources/assets/src/components/10Oficio.vue"));
       }
     }, {
       path: 'v-tipoadjunto',
       component: function component() {
-        return Promise.all(/*! import() */[__webpack_require__.e(1), __webpack_require__.e(4), __webpack_require__.e(14), __webpack_require__.e(8)]).then(__webpack_require__.bind(null, /*! @/components/6-1-Tipoadjunto */ "./resources/assets/src/components/6-1-Tipoadjunto.vue"));
+        return Promise.all(/*! import() */[__webpack_require__.e(0), __webpack_require__.e(1), __webpack_require__.e(2), __webpack_require__.e(9)]).then(__webpack_require__.bind(null, /*! @/components/6-1-Tipoadjunto */ "./resources/assets/src/components/6-1-Tipoadjunto.vue"));
       }
     }, {
       path: 'v-contrato',
       component: function component() {
-        return Promise.all(/*! import() */[__webpack_require__.e(1), __webpack_require__.e(4), __webpack_require__.e(14), __webpack_require__.e(5)]).then(__webpack_require__.bind(null, /*! @/components/02Contrato */ "./resources/assets/src/components/02Contrato.vue"));
+        return Promise.all(/*! import() */[__webpack_require__.e(0), __webpack_require__.e(1), __webpack_require__.e(2), __webpack_require__.e(6)]).then(__webpack_require__.bind(null, /*! @/components/02Contrato */ "./resources/assets/src/components/02Contrato.vue"));
       }
     }, {
       path: 'v-compra',
       component: function component() {
-        return Promise.all(/*! import() */[__webpack_require__.e(1), __webpack_require__.e(4), __webpack_require__.e(14), __webpack_require__.e(6)]).then(__webpack_require__.bind(null, /*! @/components/03Compra */ "./resources/assets/src/components/03Compra.vue"));
+        return Promise.all(/*! import() */[__webpack_require__.e(0), __webpack_require__.e(1), __webpack_require__.e(2), __webpack_require__.e(7)]).then(__webpack_require__.bind(null, /*! @/components/03Compra */ "./resources/assets/src/components/03Compra.vue"));
       }
     }, {
       path: 'v-financiador',
       component: function component() {
-        return Promise.all(/*! import() */[__webpack_require__.e(1), __webpack_require__.e(4), __webpack_require__.e(14), __webpack_require__.e(9)]).then(__webpack_require__.bind(null, /*! @/components/6-2-Financiador */ "./resources/assets/src/components/6-2-Financiador.vue"));
+        return Promise.all(/*! import() */[__webpack_require__.e(0), __webpack_require__.e(1), __webpack_require__.e(2), __webpack_require__.e(10)]).then(__webpack_require__.bind(null, /*! @/components/6-2-Financiador */ "./resources/assets/src/components/6-2-Financiador.vue"));
       }
     }, {
       path: 'v-personal',
       component: function component() {
-        return Promise.all(/*! import() */[__webpack_require__.e(1), __webpack_require__.e(4), __webpack_require__.e(14), __webpack_require__.e(10)]).then(__webpack_require__.bind(null, /*! @/components/6-3-Personal */ "./resources/assets/src/components/6-3-Personal.vue"));
+        return Promise.all(/*! import() */[__webpack_require__.e(0), __webpack_require__.e(1), __webpack_require__.e(2), __webpack_require__.e(11)]).then(__webpack_require__.bind(null, /*! @/components/6-3-Personal */ "./resources/assets/src/components/6-3-Personal.vue"));
       }
     }, {
       path: 'v-entidad',
       component: function component() {
-        return Promise.all(/*! import() */[__webpack_require__.e(1), __webpack_require__.e(4), __webpack_require__.e(14), __webpack_require__.e(11)]).then(__webpack_require__.bind(null, /*! @/components/6-4-EntidadAutoriza */ "./resources/assets/src/components/6-4-EntidadAutoriza.vue"));
+        return Promise.all(/*! import() */[__webpack_require__.e(0), __webpack_require__.e(1), __webpack_require__.e(2), __webpack_require__.e(12)]).then(__webpack_require__.bind(null, /*! @/components/6-4-EntidadAutoriza */ "./resources/assets/src/components/6-4-EntidadAutoriza.vue"));
+      }
+    }, {
+      /*editado por el pasante*/
+      path: 'v-proveedor',
+      component: function component() {
+        return Promise.all(/*! import() */[__webpack_require__.e(0), __webpack_require__.e(1), __webpack_require__.e(2), __webpack_require__.e(15)]).then(__webpack_require__.bind(null, /*! @/components/6-5-Proveedor */ "./resources/assets/src/components/6-5-Proveedor.vue"));
       }
     }, {
       path: 'v-usuario',
       component: function component() {
-        return Promise.all(/*! import() */[__webpack_require__.e(1), __webpack_require__.e(13), __webpack_require__.e(3)]).then(__webpack_require__.bind(null, /*! @/components/6-0-User */ "./resources/assets/src/components/6-0-User.vue"));
+        return Promise.all(/*! import() */[__webpack_require__.e(0), __webpack_require__.e(14), __webpack_require__.e(4)]).then(__webpack_require__.bind(null, /*! @/components/6-0-User */ "./resources/assets/src/components/6-0-User.vue"));
       }
     }]
   }, {

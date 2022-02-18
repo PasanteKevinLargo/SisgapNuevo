@@ -44,6 +44,9 @@ const router = new Router({
     },{
       path: 'v-entidad',
       component: () => import('@/components/6-4-EntidadAutoriza')
+    },{ /*editado por el pasante*/
+      path: 'v-proveedor',
+      component: () => import('@/components/6-5-Proveedor')
     },{
       path: 'v-usuario',
       component: () => import('@/components/6-0-User')
