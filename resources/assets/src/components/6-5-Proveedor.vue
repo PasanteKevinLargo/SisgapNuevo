@@ -189,15 +189,11 @@
 import Vue from "vue";
 import { ClientTable } from "vue-tables-2";
 import "vue-select/dist/vue-select.css";
-
 Vue.use(ClientTable);
 import { PaginationPlugin } from "bootstrap-vue";
 Vue.use(PaginationPlugin);
-
 import Multiselect from "vue-multiselect";
-
 import vSelect from "vue-select";
-
 export default {
   name: "tables-vue-tables-2",
   metaInfo: {
@@ -222,7 +218,7 @@ export default {
     TIPO_PROVEEDOR: "",
     OBSERVACION_PROVEEDOR: "",
     RUC_PROVEEDOR: "",
-    ACTIVO_PROVEEDOR: "",
+    ACTIVO_PROVEEDOR: 1,
     arrayProveedor:[],
    
     //fin modal data-----
@@ -240,6 +236,7 @@ export default {
       "OBSERVACION_PROVEEDOR",
       "RUC_PROVEEDOR",
       "ACTIVO_PROVEEDOR",
+      "accion",
     ],
     options: {
       filterable: false,
@@ -277,17 +274,14 @@ export default {
       if (!this.paginacion.to) {
         return [];
       }
-
       var from = this.paginacion.current_page - this.offset;
       if (from < 1) {
         from = 1;
       }
-
       var to = from + this.offset * 2;
       if (to >= this.paginacion.last_page) {
         to = this.paginacion.last_page;
       }
-
       var pagesArray = [];
       while (from <= to) {
         pagesArray.push(from);
@@ -347,13 +341,15 @@ export default {
       let me = this;
       if (this.tituloaccion == "Guardar") {
         axios
-          .post("/financiador/registrar", {
-            NOMBRE_FINANCIADOR: this.NOMBRE_FINANCIADOR,
-            CONTACTO_FINANCIADOR: this.CONTACTO_FINANCIADOR,
-            TELEF1_FINANCIADOR: this.TELEF1_FINANCIADOR,
-            TELEF2_FINANCIADOR: this.TELEF2_FINANCIADOR,
-            TELEF3_FINANCIADOR: this.TELEF3_FINANCIADOR,
-            EMAIL_FINANCIADOR: this.EMAIL_FINANCIADOR,
+          .post("/proveedor/registrar", {
+            NOMBRETOTAL_PROVEEDOR: this.NOMBRETOTAL_PROVEEDOR,
+            DIRECCION1_PROVEEDOR: this.DIRECCION1_PROVEEDOR,
+            TEL1_PROVEEDOR: this.TEL1_PROVEEDOR,
+            TEL2_PROVEEDOR: this.TEL2_PROVEEDOR,
+            TIPO_PROVEEDOR: this.TIPO_PROVEEDOR,
+            OBSERVACION_PROVEEDOR: this.OBSERVACION_PROVEEDOR,
+            RUC_PROVEEDOR: this.RUC_PROVEEDOR,
+            ACTIVO_PROVEEDOR: this.ACTIVO_PROVEEDOR,
           })
           .then(function (response) {
             me.ListarRegistros(1, "");
@@ -369,14 +365,16 @@ export default {
           });
       } else if (this.tituloaccion == "Actualizar") {
         axios
-          .put("/financiador/actualizar", {
-            id: this.ID_FINANCIADOR,
-            NOMBRE_FINANCIADOR: this.NOMBRE_FINANCIADOR,
-            CONTACTO_FINANCIADOR: this.CONTACTO_FINANCIADOR,
-            TELEF1_FINANCIADOR: this.TELEF1_FINANCIADOR,
-            TELEF2_FINANCIADOR: this.TELEF2_FINANCIADOR,
-            TELEF3_FINANCIADOR: this.TELEF3_FINANCIADOR,
-            EMAIL_FINANCIADOR: this.EMAIL_FINANCIADOR,
+          .put("/proveedor/actualizar", {
+            id: this.ID_PROVEEDOR,
+            NOMBRETOTAL_PROVEEDOR: this.NOMBRETOTAL_PROVEEDOR,
+            DIRECCION1_PROVEEDOR: this.DIRECCION1_PROVEEDOR,
+            TEL1_PROVEEDOR: this.TEL1_PROVEEDOR,
+            TEL2_PROVEEDOR: this.TEL2_PROVEEDOR,
+            TIPO_PROVEEDOR: this.TIPO_PROVEEDOR,
+            OBSERVACION_PROVEEDOR: this.OBSERVACION_PROVEEDOR,
+            RUC_PROVEEDOR: this.RUC_PROVEEDOR,
+            ACTIVO_PROVEEDOR: this.ACTIVO_PROVEEDOR,
           })
           .then(function (response) {
             me.ListarRegistros(1, "");
@@ -395,7 +393,6 @@ export default {
     validarRegistro() {
       this.errorPersona = 0;
       this.errorMostrarMsjPersona = [];
-
       if (!this.nombre)
         this.errorMostrarMsjPersona.push(
           "El nombre de la persona no puede estar vacío."
@@ -424,16 +421,19 @@ export default {
           this.disabled = false;
           break;
         case 2:
-           this.titulomodal1 = "Visualizar";
+          this.titulomodal1 = "Visualizar";
           this.tituloaccion = "Visualizar";
-          this.ID_FINANCIADOR = row.ID_FINANCIADOR;
-          this.NOMBRE_FINANCIADOR = row.NOMBRE_FINANCIADOR;
-          this.CONTACTO_FINANCIADOR = row.CONTACTO_FINANCIADOR;
-          this.TELEF1_FINANCIADOR = row.TELEF1_FINANCIADOR;
-          this.TELEF2_FINANCIADOR = row.TELEF2_FINANCIADOR;
-          this.TELEF3_FINANCIADOR = row.TELEF3_FINANCIADOR;
-          this.EMAIL_FINANCIADOR = row.EMAIL_FINANCIADOR;
+          this.ID_PROVEEDOR = row.ID_PROVEEDOR ;
+          this.NOMBRETOTAL_PROVEEDOR = row.NOMBRETOTAL_PROVEEDOR,
+          this.DIRECCION1_PROVEEDOR = row.DIRECCION1_PROVEEDOR,
+          this.TEL1_PROVEEDOR = row.TEL1_PROVEEDOR,
+          this.TEL2_PROVEEDOR = row.TEL2_PROVEEDOR,
+          this.TIPO_PROVEEDOR = row.TIPO_PROVEEDOR,
+          this.OBSERVACION_PROVEEDOR = row.OBSERVACION_PROVEEDOR,
+          this.RUC_PROVEEDOR = row.RUC_PROVEEDOR,
+          this.ACTIVO_PROVEEDOR = row.ACTIVO_PROVEEDOR,
           this.disabled = true;
+
           break;
         case 3:
           this.titulomodal1 = "Actualizar";
@@ -443,12 +443,15 @@ export default {
       }
     },
     borrarFormulario() {
-      this.NOMBRE_FINANCIADOR = "";
-      this.CONTACTO_FINANCIADOR = "";
-      this.TELEF1_FINANCIADOR = "";
-      this.TELEF2_FINANCIADOR = "";
-      this.TELEF3_FINANCIADOR = "";
-      this.EMAIL_FINANCIADOR = "";
+      this.NOMBRETOTAL_PROVEEDOR = "";
+      this.DIRECCION1_PROVEEDOR = "";
+      this.TEL1_PROVEEDOR = "";
+      this.TEL2_PROVEEDOR = "";
+      this.TIPO_PROVEEDOR= "";
+      this.OBSERVACION_PROVEEDOR = "";
+      this.RUC_PROVEEDOR = "";
+      this.ACTIVO_PROVEEDOR = "";
+
     },
     deleteRegistro(idregistro) {
       let me = this;

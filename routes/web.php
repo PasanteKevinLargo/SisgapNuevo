@@ -89,13 +89,6 @@ Route::group(['middleware'=>['auth']],function(){
     Route::put('/financiador/actualizar', 'FinanciadorController@update');
     Route::post('/financiador/destroy', 'FinanciadorController@destroy');
 
-    //Proveedor agregado por el pasante
-    Route::get('/proveedor/selectProveedor', 'ProveedorController@selectFinanciador');
-    Route::get('/proveedor/index', 'ProveedorController@index');
-    Route::post('/proveedor/registrar', 'ProveedorController@store');
-    Route::put('/proveedor/actualizar', 'ProveedorController@update');
-    Route::post('/proveedor/destroy', 'ProveedorController@destroy');
-
     //Personal
     Route::get('/personal/selectPersonal', 'PersonalController@selectPersonal');
     Route::get('/personal/index', 'PersonalController@index');
@@ -103,8 +96,8 @@ Route::group(['middleware'=>['auth']],function(){
     Route::put('/personal/actualizar', 'PersonalController@update');
     Route::post('/personal/destroy', 'PersonalController@destroy');
 
-    //Proveedor
-    Route::get('/proveedor/selectProveedor', 'ProveedorController@selectProveedor');
+    //Proveedor agregado por el pasante
+    Route::get('/proveedor/selectProveedor', 'ProveedorController@selectFinanciador');
     Route::get('/proveedor/index', 'ProveedorController@index');
     Route::post('/proveedor/registrar', 'ProveedorController@store');
     Route::put('/proveedor/actualizar', 'ProveedorController@update');
