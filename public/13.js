@@ -230,6 +230,7 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(bootstrap_vue__WEBPACK_IMPORTED_M
       vselectCliente: null,
       buscar: "",
       currentPage: 1,
+      disabled: true,
       modal: 0,
       //modal data modificado por el pasante 
       ID_PROVEEDOR: 0,
@@ -447,7 +448,7 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(bootstrap_vue__WEBPACK_IMPORTED_M
     },
     deleteRegistro: function deleteRegistro(idregistro) {
       var me = this;
-      axios.post("/financiador/destroy", {
+      axios.post("/proveedor/destroy", {
         id: idregistro
       }).then(function (response) {
         me.ListarRegistros(1, "");

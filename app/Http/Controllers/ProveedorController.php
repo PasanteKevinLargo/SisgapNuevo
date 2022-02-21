@@ -73,9 +73,6 @@ class ProveedorController extends Controller
         }
 
         $registronuevo = new Proveedor();
-        $registronuevo->CODE_PROVEEDOR= $request-> CODE_PROVEEDOR;
-        $registronuevo->NOMBRE_PROVEEDOR= $request-> NOMBRE_PROVEEDOR;
-        $registronuevo->APELLIDO_PROVEEDOR= $request-> APELLIDO_PROVEEDOR;
         $registronuevo->NOMBRETOTAL_PROVEEDOR= $request-> NOMBRETOTAL_PROVEEDOR;
         $registronuevo->DIRECCION1_PROVEEDOR= $request-> DIRECCION1_PROVEEDOR;
         $registronuevo->TEL1_PROVEEDOR= $request-> TEL1_PROVEEDOR;
@@ -83,13 +80,7 @@ class ProveedorController extends Controller
         $registronuevo->TIPO_PROVEEDOR= $request-> TIPO_PROVEEDOR;
         $registronuevo->OBSERVACION_PROVEEDOR= $request-> OBSERVACION_PROVEEDOR;
         $registronuevo->RUC_PROVEEDOR= $request-> RUC_PROVEEDOR;
-        $registronuevo->DSCTO_PROVEEDOR= $request-> DSCTO_PROVEEDOR;
-        $registronuevo->PLAZO_PROVEEDOR= $request->  PLAZO_PROVEEDOR;
         $registronuevo->ACTIVO_PROVEEDOR= $request-> ACTIVO_PROVEEDOR;
-        $registronuevo->SERIE_PROVEEDOR= $request-> SERIE_PROVEEDOR;
-        $registronuevo->CODESPECIAL_PROVEEDOR= $request-> CODESPECIAL_PROVEEDOR;
-        $registronuevo->AUTORIZACION_PROVEEDOR= $request-> AUTORIZACION_PROVEEDOR;
-        $registronuevo->CADUCIDAD_PROVEEDOR= $request-> CADUCIDAD_PROVEEDOR;
         $registronuevo->save();
         return true;   
     }
@@ -101,23 +92,14 @@ class ProveedorController extends Controller
             return redirect('/');
         }
         $actualizar = Proveedor::findOrFail($request->id);
-        $registronuevo->CODE_PROVEEDOR= $request-> CODE_PROVEEDOR;
-        $registronuevo->NOMBRE_PROVEEDOR= $request-> NOMBRE_PROVEEDOR;
-        $registronuevo->APELLIDO_PROVEEDOR= $request-> APELLIDO_PROVEEDOR;
-        $registronuevo->NOMBRETOTAL_PROVEEDOR= $request-> NOMBRETOTAL_PROVEEDOR;
-        $registronuevo->DIRECCION1_PROVEEDOR= $request-> DIRECCION1_PROVEEDOR;
-        $registronuevo->TEL1_PROVEEDOR= $request-> TEL1_PROVEEDOR;
-        $registronuevo->TEL2_PROVEEDOR= $request-> TEL2_PROVEEDOR;
-        $registronuevo->TIPO_PROVEEDOR= $request-> TIPO_PROVEEDOR;
-        $registronuevo->OBSERVACION_PROVEEDOR= $request-> OBSERVACION_PROVEEDOR;
-        $registronuevo->RUC_PROVEEDOR= $request-> RUC_PROVEEDOR;
-        $registronuevo->DSCTO_PROVEEDOR= $request-> DSCTO_PROVEEDOR;
-        $registronuevo->PLAZO_PROVEEDOR= $request->  PLAZO_PROVEEDOR;
-        $registronuevo->ACTIVO_PROVEEDOR= $request-> ACTIVO_PROVEEDOR;
-        $registronuevo->SERIE_PROVEEDOR= $request-> SERIE_PROVEEDOR;
-        $registronuevo->CODESPECIAL_PROVEEDOR= $request-> CODESPECIAL_PROVEEDOR;
-        $registronuevo->AUTORIZACION_PROVEEDOR= $request-> AUTORIZACION_PROVEEDOR;
-        $registronuevo->CADUCIDAD_PROVEEDOR= $request-> CADUCIDAD_PROVEEDOR;
+        $actualizar->NOMBRETOTAL_PROVEEDOR= $request-> NOMBRETOTAL_PROVEEDOR;
+        $actualizar->DIRECCION1_PROVEEDOR= $request-> DIRECCION1_PROVEEDOR;
+        $actualizar->TEL1_PROVEEDOR= $request-> TEL1_PROVEEDOR;
+        $actualizar->TEL2_PROVEEDOR= $request-> TEL2_PROVEEDOR;
+        $actualizar->TIPO_PROVEEDOR= $request-> TIPO_PROVEEDOR;
+        $actualizar->OBSERVACION_PROVEEDOR= $request-> OBSERVACION_PROVEEDOR;
+        $actualizar->RUC_PROVEEDOR= $request-> RUC_PROVEEDOR;
+        $actualizar->ACTIVO_PROVEEDOR= $request-> ACTIVO_PROVEEDOR;
         $actualizar->save();
         return true;
     }

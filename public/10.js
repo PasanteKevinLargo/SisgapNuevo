@@ -204,6 +204,7 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(bootstrap_vue__WEBPACK_IMPORTED_M
       arrayCliente: [],
       vselectCliente: null,
       buscar: "",
+      disabled: true,
       currentPage: 1,
       modal: 0,
       //modal data

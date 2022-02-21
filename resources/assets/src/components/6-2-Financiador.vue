@@ -186,6 +186,7 @@ export default {
     arrayCliente: [],
     vselectCliente: null,
     buscar: "",
+    disabled: true,
     currentPage: 1,
     modal: 0,
     //modal data

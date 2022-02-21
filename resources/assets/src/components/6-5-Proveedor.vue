@@ -208,6 +208,7 @@ export default {
     vselectCliente: null,
     buscar: "",
     currentPage: 1,
+    disabled: true,
     modal: 0,
     //modal data modificado por el pasante 
     ID_PROVEEDOR: 0,
@@ -380,7 +381,7 @@ export default {
             me.ListarRegistros(1, "");
             me.msjform("Correcto", "Actualizado exitosamente", "success");
             me.$nextTick(() => {
-              me.$bvModal.hide("modal-1");
+            me.$bvModal.hide("modal-1");
             });
           })
           .catch(function (error) {
@@ -456,7 +457,7 @@ export default {
     deleteRegistro(idregistro) {
       let me = this;
       axios
-        .post("/financiador/destroy", {
+        .post("/proveedor/destroy", {
           id: idregistro,
         })
         .then(function (response) {
