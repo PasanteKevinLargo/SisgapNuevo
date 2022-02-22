@@ -60856,18 +60856,6 @@ var render = function() {
                             {
                               attrs: {
                                 icon: "ion ion-md-desktop",
-                                to: "/home",
-                                exact: true
-                              }
-                            },
-                            [_vm._v("Firmas")]
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "sidenav-router-link",
-                            {
-                              attrs: {
-                                icon: "ion ion-md-desktop",
                                 to: "/v-financiador",
                                 exact: true
                               }
@@ -60885,6 +60873,18 @@ var render = function() {
                               }
                             },
                             [_vm._v("Proveedores")]
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "sidenav-router-link",
+                            {
+                              attrs: {
+                                icon: "ion ion-md-desktop",
+                                to: "/v-firma",
+                                exact: true
+                              }
+                            },
+                            [_vm._v("Firmas")]
                           ),
                           _vm._v(" "),
                           _c(
@@ -79465,6 +79465,12 @@ var router = new vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]({
       path: 'v-proveedor',
       component: function component() {
         return Promise.all(/*! import() */[__webpack_require__.e(0), __webpack_require__.e(1), __webpack_require__.e(2), __webpack_require__.e(13)]).then(__webpack_require__.bind(null, /*! @/components/6-5-Proveedor */ "./resources/assets/src/components/6-5-Proveedor.vue"));
+      }
+    }, {
+      /*editado por el pasante*/
+      path: 'v-firma',
+      component: function component() {
+        return Promise.all(/*! import() */[__webpack_require__.e(0), __webpack_require__.e(1), __webpack_require__.e(2), __webpack_require__.e(16)]).then(__webpack_require__.bind(null, /*! @/components/6-6-Firmas */ "./resources/assets/src/components/6-6-Firmas.vue"));
       }
     }, {
       path: 'v-usuario',

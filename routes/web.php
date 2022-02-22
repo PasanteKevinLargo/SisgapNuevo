@@ -97,11 +97,18 @@ Route::group(['middleware'=>['auth']],function(){
     Route::post('/personal/destroy', 'PersonalController@destroy');
 
     //Proveedor agregado por el pasante
-    Route::get('/proveedor/selectProveedor', 'ProveedorController@selectFinanciador');
+    Route::get('/proveedor/selectProveedor', 'ProveedorController@selectProveedor');
     Route::get('/proveedor/index', 'ProveedorController@index');
     Route::post('/proveedor/registrar', 'ProveedorController@store');
     Route::put('/proveedor/actualizar', 'ProveedorController@update');
     Route::post('/proveedor/destroy', 'ProveedorController@destroy');
+
+    //Firma agregado por el pasante 
+    Route::get('/firma/selectFirma', 'FirmaController@selectFirma');
+    Route::get('/firma/index', 'FirmaController@index');
+    Route::post('/firma/registrar', 'FirmaController@store');
+    Route::put('/firma/actualizar', 'FirmaController@update');
+    Route::post('/firma/destroy', 'FirmaController@destroy');
 
     //Oficios
     Route::get('/oficio', 'OficioController@index');
@@ -142,4 +149,5 @@ Route::group(['middleware'=>['auth']],function(){
     Route::post('/plan/registrar', 'PlanCuentaController@store');
     Route::put('/plan/actualizar', 'PlanCuentaController@update');
     Route::get('/plan/selectPlan', 'PlanCuentaController@selectPlan');
+
 });
