@@ -64,12 +64,12 @@
       :per-page="10"
       @change="pageChange"
     />
-
+    <!-- Se modifico el size a sm-->
     <b-card-body>
       <b-modal
         ref="modal-1"
         id="modal-1"
-        size="xl"
+        size="sm" 
         cancel-title="Cancelar"
         ok-title="Guardar"
         @cancel="metodocancelar()"
@@ -89,83 +89,25 @@
           <!-- Modificado por el pasante -->
           </div>
             <b-form-row>
-              <b-form-group label="Nombre Completo" class="col-12">
+              <b-form-group label="Nombres" class="col-12">
                 <b-input
-                  v-model="NOMBRETOTAL_PROVEEDOR"
-                  placeholder="Nombre Completo"
+                  v-model="NOMBRE_CARGO"
+                  placeholder="Nombres de la firma	"
                   ref="descripcion"
                   :disabled="disabled"
                 />
                </b-form-group>
 
-              <b-form-group label="Direccion" class="col-12">
+              <b-form-group label="Descripcion" class="col-12">
                 <b-input
-                  v-model="DIRECCION1_PROVEEDOR"
-                  placeholder="Direccion"
+                  v-model="DESCRIPCION_CARGO"
+                  placeholder="Descripcion del cargo"
                   ref="descripcion"
                   :disabled="disabled"
                 />
               </b-form-group>
            </b-form-row>
 
-
-            <b-form-row>
-              <b-form-group label="Telf 1" class="col-6">
-                <b-input
-                  v-model="TEL1_PROVEEDOR"
-                  placeholder="Telf 1"
-                  ref="descripcion"
-                  :disabled="disabled"
-                />
-              </b-form-group>
-
-              <b-form-group label="Telf 2" class="col-6">
-                <b-input
-                  v-model="TEL2_PROVEEDOR"
-                  placeholder="Telf 2"
-                  ref="descripcion"
-                  :disabled="disabled"
-                />
-              </b-form-group>  
-            </b-form-row>
-
-            <b-form-row>
-              <b-form-group label="Tipo de proveedor" class="col-3">
-                <b-input
-                  v-model="TIPO_PROVEEDOR"
-                  placeholder="Tipo de proveedor"
-                  ref="descripcion"
-                  :disabled="disabled"
-                />
-              </b-form-group>
-              <b-form-group label="Correo" class="col-3">
-                <b-input
-                  v-model="OBSERVACION_PROVEEDOR"
-                  placeholder="Correo"
-                  ref="descripcion"
-                  :disabled="disabled"
-                />
-              </b-form-group>
-              <b-form-group label="Ruc" class="col-3">
-                <b-input
-                  v-model="RUC_PROVEEDOR"
-                  placeholder="Ruc"
-                  ref="descripcion"
-                  :disabled="disabled"
-                />
-              </b-form-group>
-              <b-form-group label="Activo" class="col-3">
-                <b-input
-                  v-model="ACTIVO_PROVEEDOR"
-                  placeholder="Activo"
-                  ref="descripcion"
-                  :disabled="disabled"
-                />
-              </b-form-group>
-
-              
-
-            </b-form-row>
             <div v-show="errorPersona" class="form-group row div-error">
               <div class="text-center text-error">
                 <div
@@ -331,14 +273,10 @@ export default {
       if (this.tituloaccion == "Guardar") {
         axios
           .post("/firma/registrar", {
-            NOMBRETOTAL_PROVEEDOR: this.NOMBRETOTAL_PROVEEDOR,
-            DIRECCION1_PROVEEDOR: this.DIRECCION1_PROVEEDOR,
-            TEL1_PROVEEDOR: this.TEL1_PROVEEDOR,
-            TEL2_PROVEEDOR: this.TEL2_PROVEEDOR,
-            TIPO_PROVEEDOR: this.TIPO_PROVEEDOR,
-            OBSERVACION_PROVEEDOR: this.OBSERVACION_PROVEEDOR,
-            RUC_PROVEEDOR: this.RUC_PROVEEDOR,
-            ACTIVO_PROVEEDOR: this.ACTIVO_PROVEEDOR,
+            NOMBRE_CARGO: this.NOMBRE_CARGO,
+            DESCRIPCION_CARGO: this.DESCRIPCION_CARGO,
+            TITULO_CARGO: this.TITULO_CARGO,
+            ID_UNIDAD: this.ID_UNIDAD,
           })
           .then(function (response) {
             me.ListarRegistros(1, "");
@@ -355,15 +293,11 @@ export default {
       } else if (this.tituloaccion == "Actualizar") {
         axios
           .put("/firma/actualizar", {
-            id: this.ID_PROVEEDOR,
-            NOMBRETOTAL_PROVEEDOR: this.NOMBRETOTAL_PROVEEDOR,
-            DIRECCION1_PROVEEDOR: this.DIRECCION1_PROVEEDOR,
-            TEL1_PROVEEDOR: this.TEL1_PROVEEDOR,
-            TEL2_PROVEEDOR: this.TEL2_PROVEEDOR,
-            TIPO_PROVEEDOR: this.TIPO_PROVEEDOR,
-            OBSERVACION_PROVEEDOR: this.OBSERVACION_PROVEEDOR,
-            RUC_PROVEEDOR: this.RUC_PROVEEDOR,
-            ACTIVO_PROVEEDOR: this.ACTIVO_PROVEEDOR,
+            id: this.ID_CARGO,
+            NOMBRE_CARGO: this.NOMBRE_CARGO,
+            DESCRIPCION_CARGO: this.DESCRIPCION_CARGO,
+            TITULO_CARGO: this.TITULO_CARGO,
+            ID_UNIDAD: this.ID_UNIDAD,
           })
           .then(function (response) {
             me.ListarRegistros(1, "");
@@ -412,15 +346,11 @@ export default {
         case 2:
           this.titulomodal1 = "Visualizar";
           this.tituloaccion = "Visualizar";
-          this.ID_PROVEEDOR = row.ID_PROVEEDOR ;
-          this.NOMBRETOTAL_PROVEEDOR = row.NOMBRETOTAL_PROVEEDOR,
-          this.DIRECCION1_PROVEEDOR = row.DIRECCION1_PROVEEDOR,
-          this.TEL1_PROVEEDOR = row.TEL1_PROVEEDOR,
-          this.TEL2_PROVEEDOR = row.TEL2_PROVEEDOR,
-          this.TIPO_PROVEEDOR = row.TIPO_PROVEEDOR,
-          this.OBSERVACION_PROVEEDOR = row.OBSERVACION_PROVEEDOR,
-          this.RUC_PROVEEDOR = row.RUC_PROVEEDOR,
-          this.ACTIVO_PROVEEDOR = row.ACTIVO_PROVEEDOR,
+          this.ID_Cargo= row.ID_Cargo ;
+          this.NOMBRE_CARGO = row.NOMBRE_CARGO,
+          this.DESCRIPCION_CARGO = row.DESCRIPCION_CARGO,
+          this.TITULO_CARGO = row.TITULO_CARGO,
+          this.ID_UNIDAD = row.ID_UNIDAD,
           this.disabled = true;
 
           break;
@@ -432,15 +362,10 @@ export default {
       }
     },
     borrarFormulario() {
-      this.NOMBRETOTAL_PROVEEDOR = "";
-      this.DIRECCION1_PROVEEDOR = "";
-      this.TEL1_PROVEEDOR = "";
-      this.TEL2_PROVEEDOR = "";
-      this.TIPO_PROVEEDOR= "";
-      this.OBSERVACION_PROVEEDOR = "";
-      this.RUC_PROVEEDOR = "";
-      this.ACTIVO_PROVEEDOR = "";
-
+      this.NOMBRE_CARGO = "";
+      this.DESCRIPCION_CARGO = "";
+      this.TITULO_CARGO = "";
+      this.ID_UNIDAD = "";
     },
     deleteRegistro(idregistro) {
       let me = this;
