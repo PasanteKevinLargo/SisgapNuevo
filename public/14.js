@@ -349,9 +349,10 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(bootstrap_vue__WEBPACK_IMPORTED_M
           break;
 
         case 2:
+          /*Modificado por el pasante y psd: recordar modificar de manera correcta*/
           this.titulomodal1 = "Visualizar";
           this.tituloaccion = "Visualizar";
-          this.ID_Cargo = row.ID_Cargo;
+          this.ID_CARGO = row.ID_CARGO;
           this.NOMBRE_CARGO = row.NOMBRE_CARGO, this.DESCRIPCION_CARGO = row.DESCRIPCION_CARGO, this.TITULO_CARGO = row.TITULO_CARGO, this.ID_UNIDAD = row.ID_UNIDAD, this.disabled = true;
           break;
 
