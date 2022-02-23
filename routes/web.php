@@ -110,12 +110,19 @@ Route::group(['middleware'=>['auth']],function(){
     Route::put('/firma/actualizar', 'FirmaController@update');
     Route::post('/firma/destroy', 'FirmaController@destroy');
 
-    //Firma agregado por el pasante 
+    //titulo documento agregado por el pasante 
     Route::get('/titulodocumento/selectTipoDocumento', 'TituloDocumentoController@selectTituloDocumento');
     Route::get('/titulodocumento/index', 'TituloDocumentoController@index');
     Route::post('/titulodocumento/registrar', 'TituloDocumentoController@store');
     Route::put('/titulodocumento/actualizar', 'TituloDocumentoController@update');
     Route::post('/titulodocumento/destroy', 'TituloDocumentoController@destroy');
+
+    //titulos agregado por el pasante 
+    Route::get('/titulos/selectTitulos', 'TitulosController@selectTitulos');
+    Route::get('/titulos/index', 'TitulosController@index');
+    Route::post('/titulos/registrar', 'TitulosController@store');
+    Route::put('/titulos/actualizar', 'TitulosController@update');
+    Route::post('/titulos/destroy', 'TitulosController@destroy');
 
     //Oficios
     Route::get('/oficio', 'OficioController@index');
