@@ -50,6 +50,9 @@ const router = new Router({
     },{ /*editado por el pasante*/
       path: 'v-firma',
       component: () => import('@/components/6-6-Firmas')
+    },{ /*editado por el pasante*/     
+      path: 'v-titulodocumento',
+      component: () => import('@/components/6-7-TituloDocumento.vue')
     },{
       path: 'v-usuario',
       component: () => import('@/components/6-0-User')

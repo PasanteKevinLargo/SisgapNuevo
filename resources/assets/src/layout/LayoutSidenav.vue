@@ -46,6 +46,7 @@
            <sidenav-router-link icon="ion ion-md-desktop" to="/v-financiador" :exact="true">Financiador/Ejecutor</sidenav-router-link>
           <sidenav-router-link icon="ion ion-md-desktop" to="/v-proveedor" :exact="true">Proveedores</sidenav-router-link>
           <sidenav-router-link icon="ion ion-md-desktop" to="/v-firma" :exact="true">Firmas</sidenav-router-link>
+          <sidenav-router-link icon="ion ion-md-desktop" to="/v-titulodocumento" :exact="true">Titulo Documento</sidenav-router-link>
           <sidenav-router-link icon="ion ion-md-desktop" to="/v-personal" :exact="true">Personal</sidenav-router-link>
           <sidenav-router-link icon="ion ion-md-desktop" to="/v-entidad" :exact="true">Entidad Autoriza</sidenav-router-link>
           <sidenav-router-link icon="ion ion-md-desktop" to="/v-tipoadjunto" :exact="true">Tipos de Adjuntos</sidenav-router-link>
