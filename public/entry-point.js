@@ -2384,6 +2384,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'app-layout-sidenav',
@@ -60918,6 +60919,18 @@ var render = function() {
                             {
                               attrs: {
                                 icon: "ion ion-md-desktop",
+                                to: "/v-iva",
+                                exact: true
+                              }
+                            },
+                            [_vm._v("Iva")]
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "sidenav-router-link",
+                            {
+                              attrs: {
+                                icon: "ion ion-md-desktop",
                                 to: "/v-personal",
                                 exact: true
                               }
@@ -79449,66 +79462,72 @@ var router = new vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]({
     }, {
       path: 'v-proyecto',
       component: function component() {
-        return Promise.all(/*! import() */[__webpack_require__.e(0), __webpack_require__.e(19), __webpack_require__.e(3), __webpack_require__.e(2), __webpack_require__.e(5)]).then(__webpack_require__.bind(null, /*! @/components/01Proyecto */ "./resources/assets/src/components/01Proyecto.vue"));
+        return Promise.all(/*! import() */[__webpack_require__.e(0), __webpack_require__.e(20), __webpack_require__.e(3), __webpack_require__.e(2), __webpack_require__.e(5)]).then(__webpack_require__.bind(null, /*! @/components/01Proyecto */ "./resources/assets/src/components/01Proyecto.vue"));
       }
     }, {
       path: 'v-oficio',
       component: function component() {
-        return Promise.all(/*! import() */[__webpack_require__.e(0), __webpack_require__.e(19), __webpack_require__.e(2), __webpack_require__.e(8)]).then(__webpack_require__.bind(null, /*! @/components/10Oficio */ "./resources/assets/src/components/10Oficio.vue"));
+        return Promise.all(/*! import() */[__webpack_require__.e(0), __webpack_require__.e(20), __webpack_require__.e(2), __webpack_require__.e(8)]).then(__webpack_require__.bind(null, /*! @/components/10Oficio */ "./resources/assets/src/components/10Oficio.vue"));
       }
     }, {
       path: 'v-tipoadjunto',
       component: function component() {
-        return Promise.all(/*! import() */[__webpack_require__.e(0), __webpack_require__.e(19), __webpack_require__.e(2), __webpack_require__.e(9)]).then(__webpack_require__.bind(null, /*! @/components/6-1-Tipoadjunto */ "./resources/assets/src/components/6-1-Tipoadjunto.vue"));
+        return Promise.all(/*! import() */[__webpack_require__.e(0), __webpack_require__.e(20), __webpack_require__.e(2), __webpack_require__.e(9)]).then(__webpack_require__.bind(null, /*! @/components/6-1-Tipoadjunto */ "./resources/assets/src/components/6-1-Tipoadjunto.vue"));
       }
     }, {
       path: 'v-contrato',
       component: function component() {
-        return Promise.all(/*! import() */[__webpack_require__.e(0), __webpack_require__.e(19), __webpack_require__.e(2), __webpack_require__.e(6)]).then(__webpack_require__.bind(null, /*! @/components/02Contrato */ "./resources/assets/src/components/02Contrato.vue"));
+        return Promise.all(/*! import() */[__webpack_require__.e(0), __webpack_require__.e(20), __webpack_require__.e(2), __webpack_require__.e(6)]).then(__webpack_require__.bind(null, /*! @/components/02Contrato */ "./resources/assets/src/components/02Contrato.vue"));
       }
     }, {
       path: 'v-compra',
       component: function component() {
-        return Promise.all(/*! import() */[__webpack_require__.e(0), __webpack_require__.e(19), __webpack_require__.e(2), __webpack_require__.e(7)]).then(__webpack_require__.bind(null, /*! @/components/03Compra */ "./resources/assets/src/components/03Compra.vue"));
+        return Promise.all(/*! import() */[__webpack_require__.e(0), __webpack_require__.e(20), __webpack_require__.e(2), __webpack_require__.e(7)]).then(__webpack_require__.bind(null, /*! @/components/03Compra */ "./resources/assets/src/components/03Compra.vue"));
       }
     }, {
       path: 'v-financiador',
       component: function component() {
-        return Promise.all(/*! import() */[__webpack_require__.e(0), __webpack_require__.e(19), __webpack_require__.e(2), __webpack_require__.e(10)]).then(__webpack_require__.bind(null, /*! @/components/6-2-Financiador */ "./resources/assets/src/components/6-2-Financiador.vue"));
+        return Promise.all(/*! import() */[__webpack_require__.e(0), __webpack_require__.e(20), __webpack_require__.e(2), __webpack_require__.e(10)]).then(__webpack_require__.bind(null, /*! @/components/6-2-Financiador */ "./resources/assets/src/components/6-2-Financiador.vue"));
       }
     }, {
       path: 'v-personal',
       component: function component() {
-        return Promise.all(/*! import() */[__webpack_require__.e(0), __webpack_require__.e(19), __webpack_require__.e(2), __webpack_require__.e(11)]).then(__webpack_require__.bind(null, /*! @/components/6-3-Personal */ "./resources/assets/src/components/6-3-Personal.vue"));
+        return Promise.all(/*! import() */[__webpack_require__.e(0), __webpack_require__.e(20), __webpack_require__.e(2), __webpack_require__.e(11)]).then(__webpack_require__.bind(null, /*! @/components/6-3-Personal */ "./resources/assets/src/components/6-3-Personal.vue"));
       }
     }, {
       path: 'v-entidad',
       component: function component() {
-        return Promise.all(/*! import() */[__webpack_require__.e(0), __webpack_require__.e(19), __webpack_require__.e(2), __webpack_require__.e(12)]).then(__webpack_require__.bind(null, /*! @/components/6-4-EntidadAutoriza */ "./resources/assets/src/components/6-4-EntidadAutoriza.vue"));
+        return Promise.all(/*! import() */[__webpack_require__.e(0), __webpack_require__.e(20), __webpack_require__.e(2), __webpack_require__.e(12)]).then(__webpack_require__.bind(null, /*! @/components/6-4-EntidadAutoriza */ "./resources/assets/src/components/6-4-EntidadAutoriza.vue"));
       }
     }, {
       /*editado por el pasante*/
       path: 'v-proveedor',
       component: function component() {
-        return Promise.all(/*! import() */[__webpack_require__.e(0), __webpack_require__.e(19), __webpack_require__.e(2), __webpack_require__.e(13)]).then(__webpack_require__.bind(null, /*! @/components/6-5-Proveedor */ "./resources/assets/src/components/6-5-Proveedor.vue"));
+        return Promise.all(/*! import() */[__webpack_require__.e(0), __webpack_require__.e(20), __webpack_require__.e(2), __webpack_require__.e(13)]).then(__webpack_require__.bind(null, /*! @/components/6-5-Proveedor */ "./resources/assets/src/components/6-5-Proveedor.vue"));
       }
     }, {
       /*editado por el pasante*/
       path: 'v-firma',
       component: function component() {
-        return Promise.all(/*! import() */[__webpack_require__.e(0), __webpack_require__.e(19), __webpack_require__.e(2), __webpack_require__.e(14)]).then(__webpack_require__.bind(null, /*! @/components/6-6-Firmas */ "./resources/assets/src/components/6-6-Firmas.vue"));
+        return Promise.all(/*! import() */[__webpack_require__.e(0), __webpack_require__.e(20), __webpack_require__.e(2), __webpack_require__.e(14)]).then(__webpack_require__.bind(null, /*! @/components/6-6-Firmas */ "./resources/assets/src/components/6-6-Firmas.vue"));
       }
     }, {
       /*editado por el pasante*/
       path: 'v-titulodocumento',
       component: function component() {
-        return Promise.all(/*! import() */[__webpack_require__.e(0), __webpack_require__.e(19), __webpack_require__.e(2), __webpack_require__.e(15)]).then(__webpack_require__.bind(null, /*! @/components/6-7-TituloDocumento.vue */ "./resources/assets/src/components/6-7-TituloDocumento.vue"));
+        return Promise.all(/*! import() */[__webpack_require__.e(0), __webpack_require__.e(20), __webpack_require__.e(2), __webpack_require__.e(15)]).then(__webpack_require__.bind(null, /*! @/components/6-7-TituloDocumento.vue */ "./resources/assets/src/components/6-7-TituloDocumento.vue"));
       }
     }, {
       /*editado por el pasante*/
       path: 'v-titulo',
       component: function component() {
-        return Promise.all(/*! import() */[__webpack_require__.e(0), __webpack_require__.e(19), __webpack_require__.e(2), __webpack_require__.e(16)]).then(__webpack_require__.bind(null, /*! @/components/6-8-Titulo.vue */ "./resources/assets/src/components/6-8-Titulo.vue"));
+        return Promise.all(/*! import() */[__webpack_require__.e(0), __webpack_require__.e(20), __webpack_require__.e(2), __webpack_require__.e(16)]).then(__webpack_require__.bind(null, /*! @/components/6-8-Titulo.vue */ "./resources/assets/src/components/6-8-Titulo.vue"));
+      }
+    }, {
+      /*editado por el pasante*/
+      path: 'v-iva',
+      component: function component() {
+        return Promise.all(/*! import() */[__webpack_require__.e(0), __webpack_require__.e(20), __webpack_require__.e(2), __webpack_require__.e(1)]).then(__webpack_require__.bind(null, /*! @/components/6-9-Iva.vue */ "./resources/assets/src/components/6-9-Iva.vue"));
       }
     }, {
       path: 'v-usuario',

@@ -117,6 +117,13 @@ Route::group(['middleware'=>['auth']],function(){
     Route::put('/titulodocumento/actualizar', 'TituloDocumentoController@update');
     Route::post('/titulodocumento/destroy', 'TituloDocumentoController@destroy');
 
+    //iva agregado por el pasante 
+    Route::get('/iva/selectIva', 'IvaController@selectIva');
+    Route::get('/iva/index', 'IvaController@index');
+    Route::post('/iva/registrar', 'IvaController@store');
+    Route::put('/iva/actualizar', 'IvaController@update');
+    Route::post('/iva/destroy', 'IvaController@destroy');
+
     //titulos agregado por el pasante 
     Route::get('/titulos/selectTitulos', 'TitulosController@selectTitulos');
     Route::get('/titulos/index', 'TitulosController@index');
